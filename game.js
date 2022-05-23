@@ -47,3 +47,9 @@ window.onload = function () {
       myStopFunction();
     });
   }
+
+  function restart() {
+    start.addEventListener("click", function () {
+      window.location.reload();
+    });
+  }
