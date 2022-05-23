@@ -26,15 +26,24 @@ window.onload = function () {
       }
     });
   
-    mouseOut();
+    cheat();
     endGame();
     restart();
   };
 
-  function mouseOut() {
+  function cheat() {
     game.addEventListener("mouseleave", function () {
       document.getElementById("status").innerHTML =
         "THAT'S CHEATING. Press S to reload.";
+      myStopFunction();
+    });
+  }
+
+  function endGame() {
+    end.addEventListener("mouseover", function () {
+      document.getElementById("status").innerHTML = "You Won!!!";
+      score = +5;
+      document.querySelector(".example").innerHTML = "score= " + score;
       myStopFunction();
     });
   }
