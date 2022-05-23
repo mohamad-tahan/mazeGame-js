@@ -53,3 +53,17 @@ window.onload = function () {
       window.location.reload();
     });
   }
+
+  function liveTime() {
+    var currentTime = Date.now();
+    interval = setInterval(function () {
+      elapsedTime = Date.now() - currentTime;
+      document.getElementsByTagName("p")[1].innerHTML =
+        "Live: <br>" + (elapsedTime / 1000).toFixed(2);
+    }, 100);
+  }
+  
+  function myStopFunction() {
+    clearInterval(interval);
+  }
+  
