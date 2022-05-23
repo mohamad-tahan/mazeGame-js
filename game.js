@@ -30,3 +30,11 @@ window.onload = function () {
     endGame();
     restart();
   };
+
+  function mouseOut() {
+    game.addEventListener("mouseleave", function () {
+      document.getElementById("status").innerHTML =
+        "THAT'S CHEATING. Press S to reload.";
+      myStopFunction();
+    });
+  }
